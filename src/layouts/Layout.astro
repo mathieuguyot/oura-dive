@@ -1,0 +1,20 @@
+---
+import Navbar from "../components/navbar.astro";
+---
+
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>oura-dive</title>
+    </head>
+    <body>
+        <Navbar />
+        <div class="prose max-w-max text-justify mx-20 my-10">
+            <slot />
+        </div>
+    </body>
+</html>
