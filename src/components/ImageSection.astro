@@ -1,0 +1,20 @@
+---
+export interface Props {
+    title: string;
+    imageSrc: string;
+}
+
+const { title, imageSrc } = Astro.props;
+---
+
+<div class="flex items-center">
+    <img
+        src={imageSrc}
+        alt={title}
+        style="float: left; margin-right: 15px; width: 150px; height: 150px; min-width: 150px; min-height: 150px"
+    />
+    <div>
+        {title.length > 0 ? <h2>{title}</h2> : <></>}
+        <slot />
+    </div>
+</div>
